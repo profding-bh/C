@@ -1,9 +1,9 @@
 /*
  =====================================================================================
-        Filename:  a.c
+        Filename:  A.c
      	Description:  
         Version:  1.0
-        Created:  2016年04月13日 23时09分03秒
+        Created:  2016年04月13日 23时10分30秒
         Revision:  none
         Compiler:  gcc
         Author:  Jeff (), zyfforlinux@163.com
@@ -15,6 +15,7 @@
 
 int main()
 {
-    printf("a\n");
+    printf("A\n");
+
     return 0;
     }

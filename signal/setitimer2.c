@@ -62,7 +62,7 @@ typedef long     time_t;
 int
 main()
 {
-	initTime(5,0);
+	initTime(1,0);
 	for(;;)
 	{
 	}

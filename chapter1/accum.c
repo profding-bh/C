@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-main()
+int main()
 {
     int i = 1,sum = 0;
     while(i <= 100) sum += i++;

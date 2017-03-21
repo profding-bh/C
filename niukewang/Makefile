@@ -11,6 +11,7 @@ qishuiping2:qishuiping2.c
 qishuiping:qishuiping.c
 	gcc $< -o $@
 arraytest:arraytest.c
+3:3.c
 	gcc $< -o $@
 2:2.c
 	gcc $< -o $@

@@ -35,6 +35,7 @@ main ( int argc, char *argv[] )
          exit(1);
      } else if(0 == child){
         printf("I am child process, the count is %d, my process ID %d ,my parent process ID is %d\n", ++count,getpid(),getppid());
+	 	//exit(1);// 加不加exit(1),会影响count的值的
      } else{
         printf("after son, I am parent process, the count is %d, my process ID %d ,the child is %d\n", count,getpid(),child);
      }

@@ -1,4 +1,2 @@
-3
-10
-81
-0
+b is 0,CLOCKS_PER_SEC is 1000000
+over

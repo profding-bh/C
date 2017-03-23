@@ -1,10 +1,14 @@
 
 .PHONEY: all clean
-all:fork4 fork3 2 arraytest vfork qishuiping qishuiping2 qishuiping4  time_diff time_diff2 time_diff3 time_diff4 ftime time_diff5
+all:fork4 fork3 2 arraytest vfork qishuiping qishuiping2 qishuiping4  time_diff time_diff2 time_diff3 time_diff4 ftime time_diff5 time_diff6 time_diff7
 	
 # $<：第一个依赖文件
 # $@: 目标文件
 # $^: 所有的依赖文件
+time_diff7:time_diff7.c
+	gcc $< -o $@
+time_diff6:time_diff6.c
+	gcc $< -o $@
 time_diff5:time_diff5.c
 	g++ $< -o $@
 ftime:ftime.c

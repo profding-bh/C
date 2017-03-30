@@ -5,7 +5,7 @@
 #include<stdlib.h>
 
 /*
-@breif: 判断目录是否存在
+@brief: 判断目录是否存在
 @param: dir_path,目录名称，包含路径
 
 @return: 目录路径为空或者不存在目录返回-1，否则存在返回0

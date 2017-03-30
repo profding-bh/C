@@ -2,7 +2,7 @@
 #include<stdio.h>
 
 /*
-@breif: 判断文件是否存在
+@brief: 判断文件是否存在
 @param: file_path,文件名称，包含路径
 
 @return: 文件路径为空或者不存在文件返回-1，否则存在返回0

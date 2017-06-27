@@ -16,7 +16,8 @@ main()
 	   printf("Alarm> \n");
 		if( fgets(line,sizeof(line),stdin) == NULL)
 			 exit(0);
-		if(strlen(line)<=1) continue;
+		printf("%s  %d",line,strlen(line)); // 包含'\n'
+		if(strlen(line)<=1) break;
 		if( sscanf(line,"%d %64[^\n]",&seconds,message)<2 ){
 			fprintf(stderr,"Bad command\n");
 		} else{

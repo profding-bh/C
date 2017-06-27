@@ -1,6 +1,6 @@
 
 .PHONEY: all clean
-all:fork4 fork3 2 arraytest vfork qishuiping qishuiping2 qishuiping4  time_diff time_diff2 time_diff3 time_diff4 ftime time_diff5 time_diff6 time_diff7
+all:fork4 fork3 2 arraytest vfork qishuiping qishuiping2 qishuiping4  time_diff time_diff2 time_diff3 time_diff4 ftime time_diff5 time_diff6 time_diff7 ctod
 	
 # $<：第一个依赖文件
 # $@: 目标文件
@@ -18,9 +18,9 @@ time_diff4:time_diff4.c
 time_diff3:time_diff3.c
 	gcc $< -o $@
 time_diff2:time_diff2.c
-	gcc $< -o $@
+	gcc $< -std=c99 -o $@
 time_diff:time_diff.c
-	gcc $< -o $@
+	gcc $< -std=c99 -o  $@
 qishuiping4:qishuiping4.c
 	gcc $< -o $@
 qishuiping2:qishuiping2.c
@@ -38,6 +38,8 @@ fork3:fork3.c
 	gcc $< -o $@
 
 vfork:vfork.c
+	gcc $< -o $@
+ctod:ctod.c
 	gcc $< -o $@
 clean:
 	rm *.o # $^

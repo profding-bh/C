@@ -1,5 +1,5 @@
 .PHONEY: all clean
-all: sample
+all: sample test
 	
 # $<：第一个依赖文件
 # $@: 目标文件
@@ -21,5 +21,7 @@ all: sample
 sample:sample.c
 	gcc $< -lpthread -o  $@ 
 
+test:test.c
+	gcc $<  -o  $@ 
 clean:
-	rm sample 
+	rm sample test

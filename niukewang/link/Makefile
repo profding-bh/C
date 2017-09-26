@@ -1,6 +1,6 @@
 
 .PHONEY: all clean
-all:fork4 fork3 2 arraytest vfork qishuiping qishuiping2 qishuiping4  time_diff time_diff2 time_diff3 time_diff4 ftime time_diff5 time_diff6 time_diff7 ctod testendian seq_pp seq_c  recursive
+all:fork4 fork3 2 arraytest vfork qishuiping qishuiping2 qishuiping4  time_diff time_diff2 time_diff3 time_diff4 ftime time_diff5 time_diff6 time_diff7 ctod testendian seq_pp seq_c  recursiveexport LC_ALL=Cex
 	
 # $<：第一个依赖文件
 # $@: 目标文件

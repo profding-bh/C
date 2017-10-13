@@ -36,12 +36,40 @@ void print_list(LinkList L)
 	}
 	printf("\n");
 }
+
+// 链表反转 
+LinkList LinkListReverse(LinkList L)
+{
+	 if(!L) return (LinkList)-1; 
+	 
+	 LinkList pcur,ptemp;
+	 pcur=L->link;
+	 L->link=NULL; 
+	 // 单个节点同样可以用 
+	 while(pcur != NULL )
+	 {
+	 	ptemp = pcur->link; // 拿到下一个节点 
+	 	pcur->link = L; // 头节点存在pcur->link  
+	 	L = pcur; // pcur成为新的头 
+	 	pcur = ptemp; // pcur变成下一个节点 
+	  } 
+	 return L;  // 新的头 
+}
+
+
 int main(void)
 {
 	LinkList L;
     L =	create(3);
 	print_list( L);
+	
+		L = LinkListReverse(L);
+		print_list( L);
 	return 0;
 }
+
+
+
+
 
 

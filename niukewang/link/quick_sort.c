@@ -1,5 +1,7 @@
 #include<stdio.h>
+#include<math.h>
 
+void print_array(int a[],int n);
 
 void quick_s(int a[],int s,int e)
 {
@@ -31,6 +33,7 @@ void quick_s(int a[],int s,int e)
 	a[s] = a[i]; // 可以这样做是因为，a[s]在一开始的时候已经保存起来了。
 	a[i] = key;  // 此时以key作为分界线。左边都比key小，右边都比key大。
 	
+   print_array(a,e-s+1);
 	// 然后递归：
 	quick_s(a,s,i-1);
 	quick_s(a,j+1,e);
@@ -47,9 +50,14 @@ void print_array(int a[],int n)
 
 int main()
 {
-	int a[] = {1,2,3,4};
-	quick_s(a,0,3);
-	print_array(a,4);
+	int a[] = {20,15,30,25,50,10,40};
+	quick_s(a,0,6);
+	//print_array(a,7);
+  unsigned int c= 0x12345678;
+ unsigned char b = *(unsigned char*)&c;
+printf("0x%x\n",b);
+
+printf("%d\n",pow(2,1));
 	return 0;
 }
 

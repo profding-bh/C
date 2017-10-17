@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 typedef int ElemType;
 
@@ -36,11 +37,38 @@ void print_list(LinkList L)
 	}
 	printf("\n");
 }
+
+LinkList swap_node(LinkList L)
+{
+   LinkList h = L,p,r,temp,prior;
+
+	if(!L) return (LinkList)0;
+	p=L->link;
+	r = p->link;
+  while(!p && !r)
+	{ 
+        temp= r->link;
+		if(p== h)
+		{ r->link = p;h = r;}
+		else { prior->link = r; p->link = temp;r->link = p;}
+		prior = p;
+		p->link = temp;
+		p = temp;
+		r = temp->link;
+   }
+ return h;
+}
+
+
+
+
 int main(void)
 {
 	LinkList L;
-    L =	create(3);
+    L =	create(4);
 	print_list( L);
+	L = swap_node(L);
+print_list( L);
 	return 0;
 }
 

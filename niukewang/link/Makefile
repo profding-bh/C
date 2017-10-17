@@ -1,6 +1,6 @@
 
 .PHONEY: all clean
-all:fork4 fork3 2 arraytest vfork qishuiping qishuiping2 qishuiping4  time_diff time_diff2 time_diff3 time_diff4 ftime time_diff5 time_diff6 time_diff7 ctod testendian seq_pp seq_c  recursive quick_sort
+all:fork4 fork3 2 arraytest vfork qishuiping qishuiping2 qishuiping4  time_diff time_diff2 time_diff3 time_diff4 ftime time_diff5 time_diff6 time_diff7 ctod testendian seq_pp seq_c  recursive quick_sort linklist com
 	
 # $<：第一个依赖文件
 # $@: 目标文件
@@ -50,6 +50,10 @@ seq_c:seq_c.c
 recursive:recursive.c
 	gcc $< -o $@
 quick_sort:quick_sort.c
+	gcc $< -o $@
+linklist:linklist.c
+	gcc $< -o $@
+com:com.c
 	gcc $< -o $@
 clean:
 	rm *.o # $^
